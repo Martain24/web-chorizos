@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Usamos Roboto para el cuerpo */
+}
+
+header {
+    background-image: url("principal.jpeg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-p-header {
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 0px 20px;
+    border-radius: 50px;
+}
+
+.titulo-p-header h1 {
+    font-size: 4rem;
+    font-family: "Rouge Script", cursive; /* Mantén esta fuente para el primer título */
+}
+
+.titulo-p-header p {
+    font-size: 1.5rem;
+    font-family: 'Lora', serif; /* Cambiado a Lora para una apariencia más elegante */
+}
+
+/* General styling for main */
+main {
+    background-color: #E5E1DA;
+    padding: 50px 20px; /* Espaciado interno para mayor separación */
+    color: rgb(37, 37, 37);
+    display: flex;
+    flex-direction: column; /* Alinea los elementos de forma vertical */
+    align-items: center; /* Centra horizontalmente los elementos */
+    gap: 30px; /* Espaciado entre secciones */
+    font-family: 'Roboto', sans-serif; /* Cambiado a Roboto */
+}
+
+/* Section for the welcome message */
+.titulo-p-bienvenida {
+    max-width: 500px;
+    border-radius: 50px;
+    padding: 20px;
+    text-align: center;
+}
+.titulo-p-bienvenida p {
+    max-width: 400px;
+    font-weight: 500;
+    font-family: 'Lora', serif; /* Cambiado a Lora */
+}
+
+/* Styling for the products section */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas grandes */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    max-width: 900px; /* Limita el ancho máximo de la fila */
+    padding: 20px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 650px) {
+    .productos {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+/* Individual product card styling */
+.card-product {
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación al pasar el mouse */
+}
+
+.card-product:hover {
+    transform: translateY(-2px); /* Eleva ligeramente la tarjeta */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Sombra más intensa */
+}
+
+.card-product img {
+    width: 90%;
+    max-height: 250px;
+    object-fit: cover; /* Asegura que las imágenes no se deformen */
+    border-radius: 50px;
+}
+
+.card-product h3 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Cambiado a Roboto */
+}
+
+.card-product p {
+    font-size: 1rem;
+    font-family: 'Lora', serif; /* Cambiado a Lora */
+    color: rgb(80, 80, 80);
+}
+
+.end-page {
+    background-color: #B3C8CF;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para apilar el título y los valores */
+    justify-content: center;
+    align-items: center; 
+}
+
+.titulo-valores h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px; /* Espacio entre el título y los valores */
+    font-family: 'Lora', serif; /* Cambiado a Lora */
+}
+
+.valores {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    width: 90%;
+    max-width: 600px;
+    flex-wrap: wrap; /* Permite que los valores se ajusten en filas si es necesario */
+}
+
+.valor {
+    border-radius: 20px;
+    padding: 15px;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.valor h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Cambiado a Roboto */
+}
+
+.valor p {
+    font-size: 1rem;
+    color: black;
+    font-family: 'Lora', serif; /* Cambiado a Lora */
+}
+
+.icono {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 650px) {
+    .valores {
+        justify-content: center; /* Centra los valores en pantallas pequeñas */
+        gap: 20px; /* Reduce el espacio entre los elementos */
+    }
+    
+    .valor {
+        width: 100%; /* Hace que cada valor ocupe todo el ancho disponible */
+    }
+    
+    .titulo-valores h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño del título en pantallas pequeñas */
+    }
+}
